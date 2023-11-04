@@ -30,14 +30,14 @@ info:
 http-connector:
   hosts:
     api-catalog:
-      host: localhost
+      host: api-catalog
       port: 6070
       endpoints:
         get-city:
           url: "/api/flights/catalog/city/{code}"
-          readTimeout: 1000
-          writeTimeout: 1000
-          connectionTimeout: 1000
+          readTimeout: 10000
+          writeTimeout: 10000
+          connectionTimeout: 10000
 
 resilience4j:
   circuitbreaker:
